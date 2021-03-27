@@ -6,26 +6,14 @@ const fetchData = async (searchTerm) => {
         }
     });
 
-    console.log(response.data);
+    return response.data.Search;
 }
 
 const input = document.querySelector('input');
 
-const debounce = (func, delay = 1000) => {
-    let timeoutId;
-    return (...args) => {
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-        timeoutId = setTimeout(() => {
-            func.apply(null, args);
-        }, delay)
-    };
+const onInput = async event => {
+    const movies = await fetchData(event.target.value);
+    console.log(movies);
 };
 
-
-const onInput = debounce(event => {
-    fetchData(event.target.value);
-});
-
-input.addEventListener('input', onInput);
+input.addEventListener('input', debounce(onInput, 500));
