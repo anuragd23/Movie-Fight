@@ -78,3 +78,10 @@ const onMovieSelect = async movie => {
     console.log(response.data);
 };
 
+const movieTemplate = (movieDetail) => {
+    return `
+    <article class="media">
+    </article>
+    `
+};
+
