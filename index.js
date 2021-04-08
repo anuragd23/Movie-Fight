@@ -95,6 +95,10 @@ const movieTemplate = (movieDetail) => {
             </div>
         </div>
     </article>
+    <article class="notification is-primary">
+        <p class="title">${movieDetail.Awards}</p>
+        <p class="subtitle">Awards</p>
+    </article>
      `
 };
 
