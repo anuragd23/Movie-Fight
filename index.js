@@ -23,7 +23,10 @@ createAutoComplete({
         `
     },
     onOptionSelect: (movie) => {
-        
+        onMovieSelect(movie);
+    },
+    inputValue: (movie) => {
+        return movie.Title;
     }
 });
 
