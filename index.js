@@ -19,7 +19,9 @@ createAutoComplete({
         const imgSrc = movie.Poster === 'N/A' ? '' : movie.Poster;
         return `
             <img src="${imgSrc}" />
+            <div>
             ${movie.Title}
+            </div>
         `
     },
     onOptionSelect: (movie) => {
