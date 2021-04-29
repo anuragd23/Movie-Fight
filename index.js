@@ -16,11 +16,9 @@ const autocompleteConfig = {
                 s: searchTerm
             }
         });
-    
         if (response.data.Error) {
            return []; 
-        }
-        
+        }   
         return response.data.Search;
     }
 };
@@ -80,7 +78,6 @@ const runComparison = () => {
             rightStat.classList.add('is-warning');
         }
     });
-
 };
 
 const movieTemplate = (movieDetail) => {

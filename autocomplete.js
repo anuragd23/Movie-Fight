@@ -18,7 +18,7 @@ const createAutoComplete = ({
     const input = root.querySelector('input');
     const dropdown = root.querySelector('.dropdown');
     const resultWrapper = root.querySelector('.results');
-
+    
     const onInput = async event => {
         const items = await fetchData(event.target.value);
 
@@ -39,8 +39,7 @@ const createAutoComplete = ({
                 dropdown.classList.remove('is-active');
                 input.value = inputValue(item);
                 onOptionSelect(item);
-            });
-        
+            });        
             resultWrapper.appendChild(option);
         }
     };
@@ -52,6 +51,4 @@ const createAutoComplete = ({
             dropdown.classList.remove('is-active');
         }
     });
-
-
-    };
+};
